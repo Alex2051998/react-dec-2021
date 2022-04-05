@@ -13,8 +13,10 @@ const Comments = () => {
     },[])
     return (
         <div>
-            <h2>Comments</h2>
-            {comments.map(comment => <Comment key={comment.id} comment={comment}/>)}
+            <h2 className={'header'}>Comments</h2>
+            <div className={'styleComments'}>
+                {comments.map(comment => <Comment key={comment.id} comment={comment}/>)}
+            </div>
         </div>
     );
 };

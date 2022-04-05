@@ -12,8 +12,12 @@ const Users = () => {
     }, [])
     return (
         <div>
-            {users.map(user => <User key={user.id} user={user}/>)}
+            <h1 className={'header'}>Users</h1>
+            <div className={'styleUsers'}>
+                {users.map(user => <User key={user.id} user={user}/>)}
+            </div>
         </div>
+
     );
 };
 

@@ -12,8 +12,11 @@ const Posts = () => {
     }, [])
     return (
         <div>
-            <h1>Posts</h1>
-            {posts.map(post => <Post key={post.id} post={post}/>)}
+            <h1 className={'header'}>Posts</h1>
+            <div className={'stylePosts'}>
+                {posts.map(post => <Post key={post.id} post={post}/>)}
+            </div>
+
         </div>
     );
 };
