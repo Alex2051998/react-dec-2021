@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 
 import Post from "./Post";
+import {postsServices} from "../../services/posts.services";
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect( () => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(value => value.json())
+        postsServices.getAllPosts()
             .then(value => setPosts(value))
     }, [])
     return (
