@@ -8,6 +8,10 @@ const Posts = () => {
 
     useEffect( () => {
         postsServices.getAllPosts()
+            .then(value => {
+                value.length = 10
+                return value
+            })
             .then(value => setPosts(value))
     }, [])
     return (

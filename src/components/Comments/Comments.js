@@ -9,6 +9,7 @@ const Comments = () => {
 
     useEffect(() => {
        commentsServices.getAllComments()
+            .then(value => value.slice(0, 10))
             .then(value => setComments(value))
     },[])
     return (
