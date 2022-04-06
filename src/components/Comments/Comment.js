@@ -3,7 +3,7 @@ import React from 'react';
 const Comment = ({comment}) => {
     const {postId, id, name, email, body} = comment;
     return (
-        <div className={'stuleComment'}>
+        <div className={'styleComment'}>
             postId - {postId}
             <br/>
             id - {id}

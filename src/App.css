@@ -13,6 +13,10 @@
     background-color: azure;
     padding: 15px;
     margin: 10px;
+
+}
+.stylePost:nth-child(odd) {
+    background: #b3f6f6;
 }
 
 .stylePosts{
@@ -24,11 +28,15 @@
 
 
 
-.stuleComment{
+.styleComment{
     width: 70%;
     background-color: #f2f8ff;
     padding: 15px;
     margin: 10px;
+}
+
+.styleComment:nth-child(odd) {
+    background: #a4d2fc;
 }
 
 .styleComments{
