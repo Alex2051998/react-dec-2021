@@ -1,14 +1,7 @@
-import Users from "./components/Users/Users";
-import Posts from "./components/Posts/Posts";
-import Comments from "./components/Comments/Comments";
-import './App.css';
-
 function App() {
   return (
     <div>
-        <Users/>
-        <Posts/>
-        <Comments/>
+        <h1>Hello!!!</h1>
     </div>
   );
 }
