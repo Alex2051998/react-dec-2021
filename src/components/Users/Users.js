@@ -3,19 +3,19 @@ import React, {useEffect, useState} from 'react';
 import User from "./User";
 import {usersServices} from "../../services/users.services";
 
-const Users = () => {
+const Users = ({setUser}) => {
     const [users, setUsers] = useState([]);
 
+
     useEffect(() => {
-        usersServices.getAllUsers()
-            .then(value => setUsers(value))
+        usersServices.getAllUsers().then(({data}) => setUsers(data))
     }, [])
     return (
         <div>
-            <h1 className={'header'}>Users</h1>
-            <div className={'styleUsers'}>
-                {users.map(user => <User key={user.id} user={user}/>)}
+            <div>
+                    {users.map(user => <User key={user.id} user={user} setUser={setUser}/>)}
             </div>
+
         </div>
 
     );

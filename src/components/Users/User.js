@@ -1,10 +1,14 @@
 import React from 'react';
 
-const User = ({user}) => {
-    const {id, name, username, email} = user;
+const User = ({user, setUser}) => {
+    const {id, name, username} = user;
+
     return (
         <div>
-            {id}-{name}-{username}-{email}
+            {id}-{name}-{username}
+            <div>
+                <input type="button" value="show info" onClick={() => setUser(user)}/>
+            </div>
         </div>
     );
 };
