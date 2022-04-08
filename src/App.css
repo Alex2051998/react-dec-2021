@@ -8,6 +8,15 @@
     text-align: start;
 }
 
+.styleUsersLeft{
+    width: 50%;
+}
+
+.styleUsersRight{
+    width: 50%;
+    text-align: center;
+}
+
 .stylePost{
     width: 70%;
     background-color: azure;

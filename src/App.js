@@ -6,8 +6,8 @@ import UserInfo from "./userInfo/userInfo";
 
 
 function App() {
-    const [user, setUser] = useState([]);
-    const [id, setId] = useState([]);
+    const [user, setUser] = useState(null);
+    const [id, setId] = useState(null);
 
     const getUserById = async (id) => {
         console.log(id);
@@ -16,8 +16,10 @@ function App() {
     return (
         <div>
             <div className={'styleUsers'}>
-                <Users setUser={setUser}/>
-                <div>
+                <div className={'styleUsersLeft'}>
+                    <Users setUser={setUser} getUserById={getUserById}/>
+                </div>
+                <div className={'styleUsersRight'}>
                     {user && <UserInfo user={user} getUserById={getUserById}/>}
                 </div>
             </div>
