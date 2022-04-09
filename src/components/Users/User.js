@@ -18,4 +18,4 @@ const User = ({user, setUser, getUserById}) => {
     );
 };
 
-export default User;
+export {User};

@@ -16,5 +16,5 @@ const UserInfo = ({user, getUserById}) => {
     );
 };
 
-export default UserInfo;
+export {UserInfo};
 

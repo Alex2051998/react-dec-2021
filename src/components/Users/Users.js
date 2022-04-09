@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
-import User from "./User";
-import {usersServices} from "../../services/users.services";
+import {User} from "./User";
+import {usersServices} from "../../services";
 
 const Users = ({setUser, getUserById}) => {
     const [users, setUsers] = useState([]);
@@ -30,4 +30,4 @@ const Users = ({setUser, getUserById}) => {
     );
 };
 
-export default Users;
+export {Users};

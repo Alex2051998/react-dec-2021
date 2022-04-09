@@ -1,9 +1,7 @@
 import {useState} from "react";
 
 import { Users, UserInfo, Posts } from './components';
-// import Posts from "./components/Posts/Posts";
 import './App.css';
-// import UserInfo from "./components/userInfo/userInfo";
 
 
 function App() {
