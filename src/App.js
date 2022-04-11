@@ -2,15 +2,18 @@ import {useState} from "react";
 
 import { Users, UserInfo, Posts } from './components';
 import './App.css';
+import {postsServices} from "./services";
 
 
 function App() {
     const [user, setUser] = useState(null);
-    const [id, setId] = useState(null);
+    const [data, setData] = useState(null);
 
     const getUserById = async (id) => {
+        const data = await postsServices.getByIdPosts(id);
         console.log(id);
-        await setId(id);
+        setData(data.data);
+        console.log(data);
     }
     return (
         <div>
@@ -23,7 +26,7 @@ function App() {
                 </div>
             </div>
 
-            {id && <Posts id={id}/>}
+            {data && <Posts data={data}/>}
         </div>
     );
 }
