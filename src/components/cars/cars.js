@@ -11,7 +11,7 @@ const Cars = ({car, setCarForUpdate, carUpdate}) => {
 
     useEffect(() => {
         carService.getAll().then(({data}) => setCars(data))
-    }, [])
+    }, [carUpdate])
 
     useEffect(() => {
         if(car){
@@ -23,7 +23,7 @@ const Cars = ({car, setCarForUpdate, carUpdate}) => {
         if(deletCar){
             carService.getAll().then(({data}) => setCars(data))
         }
-    }, [deletCar, carUpdate])
+    }, [deletCar])
 
 
 

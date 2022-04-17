@@ -28,8 +28,9 @@ const CarForm = ({setCar, carForUpdate, setCarForUpdate, setCarUpdate}) => {
         try {
             if (carForUpdate) {
                 const {data} = await carService.updateById(carForUpdate.id, car);
-                setCarUpdate(data)
+                setCarUpdate(data);
                 setCarForUpdate(false);
+                console.log(data);
             } else {
                 const {data} = await carService.create(car);
                 console.log(data);
