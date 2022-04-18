@@ -1,0 +1,19 @@
+.header{
+    min-height: 70px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header button{
+    font-size: 30px;
+    color: snow;
+    text-decoration: none;
+}
+
+.header button[class='active']{
+    text-decoration: underline;
+    color: aqua;
+}

@@ -1,0 +1,24 @@
+.wrapper{
+    display: flex;
+    justify-content: start;
+}
+
+.users{
+    width: 20%;
+}
+
+.usersDetails{
+    width: 70%;
+}
+
+.userStyle{
+    border: 1px solid aqua;
+    margin: 10px;
+    padding: 15px;
+}
+
+.userDetailsStyle{
+    border: 1px solid aqua;
+    margin: 10px;
+    padding: 15px;
+}
