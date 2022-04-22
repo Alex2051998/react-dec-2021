@@ -9,13 +9,27 @@ const reducer = (state, action) => {
 
     switch (type) {
         case 'addCat':
-            return {...state, cats: [...state.cats, {name: payload, id: Date.now()}]}
+            const cats = payload;
+            // const [newCats] = state.cats.slice(-1); аналогічний запис.
+            // const newId = newCats ? newCats.id + 1 : 0;
+            const newCats = state.cats.slice(-1);
+            const newId = newCats[0] ? newCats[0].id + 1 : 0;
+            // console.log(newCats);
+
+
+
+            // {id:newId, name:cats}
+            const newVar = {id:newId, name:cats}
+
+            console.log(newVar);
+
+            return {...state, cats: [...state.cats, newVar]}
         case 'delCat':
-            return {...state, cats:state.cats.filter(cat => cat.id !== payload)}
+            return {...state, cats: state.cats.filter(cat => cat.id !== payload)}
         case 'addDog':
             return {...state, dogs: [...state.dogs, {name: payload, id: Date.now()}]}
         case 'delDog':
-            return {...state, dogs:state.dogs.filter(dog => dog.id !== payload)}
+            return {...state, dogs: state.dogs.filter(dog => dog.id !== payload)}
     }
 }
 
@@ -26,12 +40,14 @@ function App() {
         e.preventDefault();
         dispach({type: 'addCat', payload: e.target[0].value});
         console.log(e.target[0].value);
+        e.target[0].value = '';
     }
 
     const createDog = (e) => {
         e.preventDefault();
         dispach({type: 'addDog', payload: e.target[0].value});
         console.log(e.target[0].value);
+        e.target[0].value = '';
     }
 
 
