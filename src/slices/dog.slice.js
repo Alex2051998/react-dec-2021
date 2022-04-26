@@ -10,8 +10,11 @@ const dogSlice = createSlice({
     reducers: {
         addDog: (state, action) => {
             const {dog} = action.payload;
-            const newDog = {id: Date.now(), name: dog}
-            state.dogs.push(newDog)
+            const [newDogs] = state.dogs.slice(-1);
+            const newId = newDogs ? newDogs.id + 1 : 0;
+            const newDog = {id: newId, name: dog};
+            state.dogs.push(newDog);
+            console.log(newDog);
         },
         dellDog:(state, action) => {
             return{...state, dogs:state.dogs.filter(dog => dog.id !== action.payload.id)}
