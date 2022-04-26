@@ -9,7 +9,7 @@ const Cat = ({cat}) => {
     return (
         <div>
             Name: {name}
-            <button onClick={()=>dispatch(catActions.dellCat({id: id}))}>Del cat</button>
+            <button onClick={()=>dispatch(catActions.dellCat({id}))}>Del cat</button>
         </div>
     );
 };

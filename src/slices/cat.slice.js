@@ -14,14 +14,15 @@ const catSlice = createSlice({
             state.cats.push(newCat)
         },
         dellCat:(state, action) => {
-            state.filter(cat => cat.id != payload.id)
+            state.cats.filter(cat => cat.id !== action.payload.id)
         }
     }
 });
 
-const {reducer: catReducer, actions: {addCat}} = catSlice;
+const {reducer: catReducer, actions: {addCat, dellCat}} = catSlice;
 
 export default catReducer
 export const catActions = {
-    addCat
+    addCat,
+    dellCat
 }
