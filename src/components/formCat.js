@@ -8,14 +8,17 @@ const FormCat = () => {
     const dispatch = useDispatch();
 
 
+
     const addAction = () => {
         dispatch(catActions.addCat({cat: catInput.current.value}))
         catInput.current.value = '';
     }
     return (
         <div>
-            Cat Name: <input type={"text"} ref={catInput}/>
-            <button onClick={() => addAction()}>Save cat</button>
+            <form onSubmit={addAction}>
+                Cat Name: <input type={"text"} ref={catInput}/>
+                <button>Save cat</button>
+            </form>
         </div>
     );
 };
