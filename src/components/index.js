@@ -1,4 +1,5 @@
-export * from './form';
+export * from './formCat';
+export * from './formDog';
 export * from './dogs';
 export * from './cats';
 export * from './cat';

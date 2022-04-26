@@ -1,10 +1,21 @@
-import {Cats, Form} from "./components";
+import {Cats, Dogs, FormCat, FormDog} from "./components";
+import Css from "./Css.css";
 
 function App() {
   return (
     <div>
-        <Form/>
-        <Cats/>
+        <div className={'header'}>
+            <div>
+                <FormCat/>
+                <hr/>
+                <Cats/>
+            </div>
+            <div>
+                <FormDog/>
+                <hr/>
+                <Dogs/>
+            </div>
+        </div>
     </div>
   );
 }

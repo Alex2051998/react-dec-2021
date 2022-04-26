@@ -14,7 +14,8 @@ const catSlice = createSlice({
             state.cats.push(newCat)
         },
         dellCat:(state, action) => {
-            state.cats.filter(cat => cat.id !== action.payload.id)
+            return{...state, cats:state.cats.filter(cat => cat.id !== action.payload.id)}
+            // state.cats.filter(cat => cat.id !== action.payload.id)
         }
     }
 });
