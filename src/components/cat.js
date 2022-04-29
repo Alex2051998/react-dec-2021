@@ -10,6 +10,7 @@ const Cat = ({cat}) => {
         <div>
             Name: {name}
             <button onClick={()=>dispatch(catActions.dellCat({id}))}>Del cat</button>
+            <button onClick={()=>dispatch(catActions.setCatForUpdate({cat}))}>Update cat</button>
         </div>
     );
 };
