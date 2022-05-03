@@ -1,7 +1,11 @@
+import {Cars} from "./components/cars";
+import CarForm from "./components/carForm";
+
 function App() {
   return (
     <div>
-        <h1>Hello!!!</h1>
+        <CarForm/>
+        <Cars/>
     </div>
   );
 }
